@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Bài tập 1 - Buổi 3 </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../indexstyle.css" media="screen" />
+    <style>
+        #card {
+            display: grid;
+            width: 40%;
+            grid-template-areas: "card-title""card-info";
+            background-color: lightgrey;
+            border: 1px solid red;
+        }
+
+        #card-title {
+            grid-area: card-title;
+            border-bottom: 1px dotted red;
+            text-align: center;
+            padding: 5px;
+        }
+
+        #card-info {
+            grid-area: card-info;
+            display: grid;
+            grid-template-areas: "card-info-image card-info-main";
+            grid-template-columns: 1fr 2fr;
+        }
+
+        #card-info>* {
+            padding: 5px;
+        }
+
+        #card-info-image {
+            grid-area: card-info-image;
+        }
+
+        #card-info-image img {
+            height: 200px;
+        }
+
+        #card-info-main {
+            grid-area: card-info-main;
+        }
+
+        #card-info-main ul {
+            list-style-type: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <!-- <?php
+        include '../common/title/title_lab3.php';
+        include '../common/topnav/topnav_lab3.php';
+        ?> -->
+
+        <div id="content">
+            <div id="card">
+                <div id="card-title">
+                    <p>header text</p>
+                </div>
+                <div id="card-info">
+                    <div id="card-info-image">
+                        <img src="./The_Field_of_Battle.jpg" alt="">
+                    </div>
+                    <div id="card-info-main">
+                        <ul>
+                            <li>Name</li>
+                            <li>Name</li>
+                            <li>Name</li>
+                            <li>Name</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <?php include '../common/footer.php'; ?> -->
+    </div>
+    <!--end div wrap-->
+</body>
+
+</html>

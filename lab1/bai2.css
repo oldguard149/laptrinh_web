@@ -1,0 +1,75 @@
+#form-container h3, #form-container p {
+    text-align: center;
+}
+
+#form-container form {
+    width: 100%;
+    margin: auto;
+    background-color: #d6d3d3;
+    padding: 10px;
+}
+
+#form-container input, #form-container select, textarea {
+    width: 50%;
+    margin-left: auto;
+    padding: 0.3rem;
+}
+
+#form-container input[type="checkbox"], input[type="radio"] {
+    width: 10%;
+    margin-left: 5px;
+}
+
+#form-container div {
+    padding: 5px;
+    display: flex;
+    align-items: space-between;
+    /*! align-content: space-between; */
+}
+
+#form-container .button {
+    margin: auto;
+    width: 60%;
+}
+
+#form-container .button button {
+    width: 50%;
+    margin: 5px;
+    padding: 10px;
+}
+
+#form-container .button button:hover {
+    cursor: pointer;
+}
+
+#form-container .button button:only-child {
+    width: 70%;
+    margin: auto;
+}
+
+#form-container .other {
+    display: inline-flex;
+    width: 100%;
+}
+
+#form-container .other div {
+    width: 50%;
+    margin-left: auto;
+    margin-right: 5px;
+}
+
+input:focus {
+    box-shadow: 1px 5px 5px 5px #9f9c9c;
+}
+button[type="submit"]:hover {
+    background-color: #71b2f8;
+    color: white;
+}
+button[type="reset"]:hover {
+    background-color: #f78989;
+    color: white;
+}
+button {
+    border: 1px solid lightblue;
+    transition-duration: 300ms;
+}

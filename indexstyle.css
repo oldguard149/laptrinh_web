@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+#wrap {
+    display: grid;
+    grid-template-areas: "title" "menu" "content" "footer";
+    grid-template-rows: min-content min-content auto min-content;
+    width: 70%;
+    margin: auto;
+    min-height: 100vh;
+    background-color: white;
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.10);
+}
+
+#title {
+    margin: 5px 0;
+    grid-area: title;
+    margin: 0 8px;
+}
+
+#title h1, #title p {
+    text-align: center;
+    padding: 5px;
+}
+
+#menu {
+    margin: 8px;
+    grid-area: menu;
+    height: min-content;
+}
+
+#menu ul {
+    list-style: none;
+    display: flex;
+    width: 100%;
+}
+
+#menu>ul>li {
+    width: 25%;
+    text-align: center;
+    margin: 0 5px;
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    position: relative;
+    display: inline-block;
+}
+#menu>ul>li>a {
+    display: block;
+    padding: 5px 15px;
+}
+
+
+.dropdown {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 300ms ease,
+        visibility 0s ease 200ms;
+}
+
+#menu li:hover .dropdown {
+    left: 0;
+    visibility: visible;
+    opacity: 1;
+}
+
+#menu>ul>li>a:hover {
+    cursor: pointer;
+}
+
+.dropdown a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    margin: auto;
+}
+
+.dropdown a:hover {
+    background-color: rgb(189, 185, 185);
+    color: white;
+    transition-duration: 400ms;
+}
+
+#content {
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#content>* {
+    margin: auto;
+}
+
+#footer {
+    display: flex;
+    border-top: 1px dotted black;
+    height: 4rem;
+}
+
+#footer p {
+    margin: auto;
+    text-align: center;
+}
