@@ -11,11 +11,11 @@ td {
     background-color: white;
 }
 
-table,
+/* table,
 table * {
     border: 1px solid black;
     border-collapse: collapse;
-}
+} */
 
 .container {
     border: 1px solid red;
@@ -64,6 +64,7 @@ img {
     /* background-image: url("edit.png"); */
 }
 
-a img:hover {
+.container-body a img:hover, .container-body .chitietlink:hover {
     box-shadow: 0px 0px 10px 5px rgb(204, 202, 202);
+    cursor: pointer;
 }

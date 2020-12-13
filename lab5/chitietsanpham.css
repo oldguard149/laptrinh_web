@@ -1,0 +1,21 @@
+#detail-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: 500px;
+    padding: 0 5px;
+    max-height: max-content;
+}
+#detail-image {
+    display: flex;
+}
+#detail-image img {
+    max-width: 80%;
+    margin: auto;
+}
+#detail-info {
+    margin: 0 10px;
+}
+#detail-info li {
+    list-style: none;
+    padding: 5px;
+}

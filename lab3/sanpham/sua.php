@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <?php
+include '../../common/domain.php';
 include '../../common/route-guard.php';
 ?>
 

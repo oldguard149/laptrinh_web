@@ -1,49 +1,23 @@
 <!DOCTYPE html>
-<?php
-include '../../common/domain.php';
-include '../../common/route-guard.php';
+<?php 
+    include '../common/domain.php';
+    include '../common/route-guard.php'
 ?>
-
 <html>
 
 <head>
-    <title> Bài tập 1 - Buổi 3 </title>
+    <title> Bài tập 2 - Buổi 5 </title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" type="text/css" href="../../indexstyle.css" media="screen" />
-    <!-- <link rel="stylesheet" href="../../lab1/bai2.css"> -->
-    <link rel="stylesheet" href="style_danhsachsanpham.css">
-    <style>
-        #form-container {
-            width: 40%;
-        }
-
-        .container-body a {
-            border: none;
-        }
-
-        /* #logout-button {
-            padding: 1rem;
-            display: flex;
-        }
-
-        #logout-button a {
-            padding: 5px;
-            border: 1px solid black;
-            color: black;
-            margin: auto;
-            transition-duration: 300ms;
-        }
-
-        #logout-button a:hover {
-            box-shadow: 0px 0px 10px 1px black; 
-        }*/
-    </style>
+    <link rel="stylesheet" href="../lab3/sanpham/style_danhsachsanpham.css">
+    <link rel="stylesheet" href="chitietsanpham.css">
 </head>
 
 <body>
     <div id="wrap">
         <?php
-        include('../include_header.php')
+        include '../common/title/title_lab5.php';
+        include '../common/topnav.php';
         ?>
         <div id="content">
             <div class="container">
@@ -68,11 +42,23 @@ include '../../common/route-guard.php';
                     </div>
                 </div>
             </div>
+            <div id="chitiet"></div>
         </div>
-
-        <?php include '../../common/footer.php'; ?>
+        <?php include '../common/footer.php'; ?>
+        <script>
+            function showDetail(id) {
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        document.getElementById('chitiet').innerHTML = this.responseText;
+                    }
+                }
+                xhttp.open('POST', 'xl_hienthi_chitiet.php', true);
+                xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                xhttp.send(`idsp=${id}`);
+            }
+        </script>
     </div>
-    <!--end div wrap-->
 </body>
 
 </html>

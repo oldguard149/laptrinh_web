@@ -30,7 +30,7 @@
 				<a href="/lab5/bai1.php">Bài 1</a>
 				<a href="/lab5/bai2.php">Bài 2</a>
 				<a href="/lab5/bai3.php">Bài 3</a>
-				<a href="#">Bài 4</a>
+				<a href="/lab5/bai4.php">Bài 4</a>
 			</div>
 		</li>
 	</ul>

@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <style>
+            * {
+                box-sizing: border-box;
+                padding: 0;
+                margin: 0;
+            }
+            body {
+                display: flex;
+                justify-content: center;
+            }
+            #detail-container {
+                display: grid;
+                grid-template-columns: 1fr 2fr;
+                width: 500px;
+                padding: 0 5px;
+                max-height: max-content;
+            }
+            #detail-image {
+                display: flex;
+            }
+            #detail-image img {
+                max-width: 80%;
+                margin: auto;
+            }
+            #detail-info {
+                margin: 0 10px;
+            }
+            #detail-info li {
+                list-style: none;
+                padding: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="detail-container">
+            <div id="detail-image">
+                <img src="../img/acer.jpg" alt="">
+            </div>
+            <div id="detail-info">
+                <ul>
+                    <li><p>Ten: acer1</p></li>
+                    <li><p>Gia: 909</p></li>
+                    <li><p>Chi tiet: asdf</p></li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
