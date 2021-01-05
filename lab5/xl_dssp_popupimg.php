@@ -15,7 +15,7 @@
             <td>" . $row['idsp'] . " </td>
             <td onmouseover=showImage(". $row['idsp'] .") onmouseout=closePopup()>" . $row['tensp'] . " </td>
             <td>" . $row['giasp'] . " </td>
-            <td> <a class='chitietlink'>Xem chi tiết</a></td>
+            <td> <a class='chitietlink' onclick=showDetail(". $row['idsp'] .")>Xem chi tiết</a></td>
             <td> <a href='" . $domain . "lab3/sanpham/sua.php?id=" . $row['idsp'] . "'><img src='edit.png' alt=''></a></td>
             <td> <a href='" . $domain . "lab3/sanpham/xoa.php?id=" . $row['idsp'] . "'><img src='delete.png' alt=''></a></td>
         </tr>";

@@ -11,6 +11,7 @@
 #detail-image img {
     max-width: 80%;
     margin: auto;
+    height: auto;
 }
 #detail-info {
     margin: 0 10px;
@@ -18,4 +19,8 @@
 #detail-info li {
     list-style: none;
     padding: 5px;
+}
+
+#chitiet {
+    margin-top: 1rem;
 }

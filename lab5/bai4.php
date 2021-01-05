@@ -10,7 +10,6 @@ include '../common/route-guard.php'
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" type="text/css" href="../../indexstyle.css" media="screen" />
     <link rel="stylesheet" href="../lab3/sanpham/style_danhsachsanpham.css">
-    <link rel="stylesheet" href="chitietsanpham.css">
     <style>
         #search-form {
             display: flex;
@@ -42,8 +41,8 @@ include '../common/route-guard.php'
                 <div class="container-body">
                     <p>Danh sách sản phẩm của bạn là:</p>
                     <div id="search-form">
-                        <label for="">Tim kiem</label>
-                        <input type="text" onchange="search(this.value)" name="search" placeholder="Nhan Enter de tim kiem">
+                        <label for="">Tìm kiếm</label>
+                        <input type="text" oninput="search(this.value)" name="search" placeholder="Nhập tên để tìm kiếm">
                     </div>
                     <table id="table">
                         <tr>
@@ -61,7 +60,6 @@ include '../common/route-guard.php'
                     </div>
                 </div>
             </div>
-            <div id="chitiet"></div>
         </div>
         <?php include '../common/footer.php'; ?>
         <script>

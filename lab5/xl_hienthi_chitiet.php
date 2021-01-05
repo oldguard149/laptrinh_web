@@ -11,9 +11,9 @@
             </div>
             <div id="detail-info">
                 <ul>
-                    <li><p>Ten: '.$result['tensp'] .'</p></li>
-                    <li><p>Gia: '.$result['giasp'] .'</p></li>
-                    <li><p>Chi tiet: '.$result['chitietsp'] .'</p></li>
+                    <li><p>Tên: '.$result['tensp'] .'</p></li>
+                    <li><p>Giá: '.$result['giasp'] .'</p></li>
+                    <li><p>Chi tiết: '.$result['chitietsp'] .'</p></li>
                 </ul>
             </div>
         </div>';

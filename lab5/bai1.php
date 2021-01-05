@@ -49,7 +49,9 @@
         ?>
         <div id="content">
             <div id="form-container">
-                <form name="mainform" action="#" method="POST" enctype="multipart/form-data" onsubmit="return validate()">
+                <form name="mainform" action="#" method="POST" enctype="multipart/form-data" 
+                    oninvalid="test()"
+                    onsubmit="return validate()">
                     <h3>Đăng ký tài khoản mới</h3>
                     <p>Vui lòng điển đầy đủ thông tin bên dưới để đăng ký tài khoản mới</p>
                     <div>
@@ -74,7 +76,6 @@
                         <label for="image">Hình đại diện</label>
                         <input type="file" name="image" id="image">
                     </div>
-                    <p class="error-message"></p>
 
                     <div>
                         <label for="job">Nghề nghiệp</label>
@@ -85,7 +86,6 @@
                             <option value="khac">Khác</option>
                         </select>
                     </div>
-                    <p class="error-message"></p>
 
                     <div class="other">
                         <label for="gender">Giới tính</label>
@@ -126,13 +126,46 @@
         <script>
             function checkUsername(username) {
                 var xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function () {
+                xhttp.onreadystatechange = function() {
                     if (this.readyState == 4 && this.status == 200) {
                         document.getElementById('usernameerror').innerHTML = this.responseText;
                     }
                 }
                 xhttp.open("GET", `xl_check_username.php/?username=${username}`, true);
                 xhttp.send();
+            }
+
+            function validate() {
+                const usernamePattern = /[A-Za-z][A-Za-z0-9]{5,14}/;
+                const containNumber = /.*[0-9]+.*/;
+                const containLetter = /.*[A-Za-z]+.*/;
+                let flag = true;
+                const username = document.getElementById('name').value;
+                if (!(usernamePattern.test(username) && containNumber.test(username) &&
+                        containLetter.test(username))) {
+                    showError('usernameerror', 'username is invalid');
+                    flag = false;
+                } else if (username == "") {
+                    showError("usernameerror", "please fill in username");
+                    flag = false;
+                } else if (document.getElementById('usernameerror').innerHTML.length > 0) {
+                    flag = false;
+                } else {
+                    hideError("usernameerror");
+                }
+                return flag;
+            }
+
+            function test() {
+                console.log('Form is invalid');
+            }
+
+            function hideError(id) {
+                document.getElementById(id).innerHTML = "";
+            }
+
+            function showError(id, message) {
+                document.getElementById(id).innerHTML = message;
             }
         </script>
 </body>
